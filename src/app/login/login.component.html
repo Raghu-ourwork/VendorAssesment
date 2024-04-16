@@ -1,0 +1,54 @@
+<!-- <div *ngIf="isLoading" class="spinner-wrapper">
+  <div class="donut"></div>
+</div> -->
+<main class="login d-flex align-items-center py-md-0">
+  <div class="container">
+    <div class="card login-card">
+      <div class="row no-gutters">
+        <div class="col-md-7">
+          <img src="assets/images/login-bg.png" alt="login" class="login-card-img">
+        </div>
+        <div class="col-md-5 content">
+          <p class="login-card-sub-title">Welcome back</p>
+          <div class="card-body text-center">
+            <p class="heading pt-3">Login to your account</p>
+            <div *ngIf="haserror" class="text-danger text-center mt-2 error-message">{{msg}}</div>
+            <form class="form pt-4" [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
+              <div class="form-group text-center ">
+                <label for="email" class="sr-only">Username</label>
+                <input type="text" formControlName="email" autocomplete="off" name="email" id="email"
+                  class="form-control" placeholder="Username">
+                 <span class="text-danger"
+                  *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+                  Username is required
+                </span>
+                 <!-- <span class="text-danger"
+                    *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+                    Enter a valid email address
+                  </span> -->
+              </div>
+              <div class="form-group pb-4 ">
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" formControlName="password" id="password" autocomplete="off" class="form-control"
+                  placeholder="Password">
+                <span class="text-danger"
+                    *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+                    Password is required
+                  </span>
+              </div>
+
+              <div class="form-group text-center d-flex align-items-center justify-content-center mb-0 pt-3">
+                  <input name="login" id="login" class="btn login-btn" type="submit" value="Login">
+              </div>
+            </form>
+            <div class="row pt-5 ">
+              <div class="col-md-12">
+                <p class="error-message">{{ msg }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

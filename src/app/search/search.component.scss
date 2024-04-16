@@ -1,0 +1,122 @@
+/* Navbar */
+
+@import '../../styles.scss';
+
+/* Navbar */
+.searchContainer {
+  width: 100%;
+  height: calc(100vh - 175px);
+  margin-top: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-spinner-wrapper {
+  height: 95vh;
+  background: white;
+}
+
+.static-frame {
+  margin-top: 95px;
+}
+
+.example-form {
+  min-width: 400px;
+  max-width: 600px;
+  width: 100%;
+
+  @media screen and (min-width:460px) and (max-width:767px) {
+    min-width: 300px;
+    max-width: 450px;
+  }
+
+  @media screen and (max-width:459px) {
+    min-width: 220px;
+    max-width: 300px;
+  }
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.5em 0 1em 0 !important;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: transparent !important;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background: rgba(217, 217, 217, 0.50);
+    font-family: 'Lato' !important;
+  }
+
+  mat-form-field {
+    .mat-hint, input, .mat-form-field-label {
+      padding-left: 39px !important;
+      color: #000;
+      font-family: 'Lato' !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-top: -10px;
+      padding-top: -10px;
+    }
+  }
+
+  mat-form-field {
+    ::placeholder {
+      padding-left: 0px !important;
+    }
+  }
+
+  .mat-option {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.285) !important;
+    color: rgba(0, 0, 0, 0.70);
+    font-family: 'Lato';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .mat-option:hover {
+    border-bottom: none !important;
+    background: rgba(255, 215, 0, 0.50) !important;
+  }
+
+  .mat-option:focus:not(.mat-option-disabled) {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.285);
+    background: rgba(255, 215, 0, 0.50) !important;
+    font-family: 'Lato' !important;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.option {
+  height: 16px !important;
+  width: 32px !important;
+  margin-top: -0.9px;
+}
+
+.close {
+  height: 12px !important;
+  width: 12px !important;
+  margin-top: 18px;
+}

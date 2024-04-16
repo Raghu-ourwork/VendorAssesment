@@ -1,0 +1,37 @@
+/* Layouts */
+// Sidebar Icon Only
+.sidebar-icon-only {
+  .main-panel {
+    @media(min-width: 992px) {
+      width: calc(100% - #{$sidebar-width-icon});
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .sidebar-icon-only {
+    .sidebar-offcanvas {
+      left: 0 !important;
+    }
+    .main-panel{
+      margin-left: 0;
+    }
+  }
+}
+.copyright {
+  padding: 15px 0;
+  // background-color: #e7e7e780;
+  border-top: 1px solid #96969633;
+  // position: fixed;
+  // bottom: 0;
+  width: 100%;
+  h5 {
+    font-size: 14px;
+    margin-bottom: 0;
+    font-family: 'Poppins-Medium';
+    color: #838181;
+    a{
+      color: #838181;
+    }
+  }
+}

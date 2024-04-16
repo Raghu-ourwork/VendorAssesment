@@ -1,0 +1,24 @@
+/* Navbar */
+
+@import '../../styles.scss';
+
+/* Navbar */
+.reportContainer {
+  width: 100%;
+  height: calc(100vh - 175px);
+  margin-top: 95px;
+}
+
+.footer h5 {
+  margin-top: 140px;
+  margin-left: 500px;
+  // align-items: center;
+}
+
+.main-spinner-wrapper {
+  height: 95vh;
+  background: white;
+}
+.static-frame{
+  margin-top: 95px;
+}
