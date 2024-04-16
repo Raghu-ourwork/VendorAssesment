@@ -1,2 +1,0 @@
-# VendorAssesment
-Vendor Assesment Process
