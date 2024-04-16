@@ -1,11 +1,26 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav mb-5 pb-5">
-
     <li class="nav-item">
       <a class="nav-link">
         <span><img src="assets/images/Dashboard.png"></span>
         <span class="menu-title">Dashboard</span>
       </a>
+
+      <a class="nav-link" (click)="togleSidebar(2,3)" [attr.aria-expanded]="(subMenuCollapsed == 1 )  ? true : false"  [attr.aria-controls]="'subMenu'+ 2" >
+        <span><img src="assets/images/Option 5.png"></span>
+        <span class="menu-title">Settings</span>
+        <i class="menu-arrow pl-5"></i>
+        <div class="collapse {{ '' ? 'show' : ''}}" id="subMenu{{2}}" aria-expanded="true" aria-controls="collapseOne" id="subMenu{{2}}" [ngbCollapse]="subMenuCollapsed != 2 ? true : false">
+          <ul class="nav flex-column sub-menu">
+              <li  class="nav-item" >
+                <a class="nav-link" routerLink="band-value" (click)="togleSidebar(4,3,3)"  [attr.aria-controls]="'subMenu'+ 3">
+                  <span>Band Values Update</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </a>
+
       <a class="nav-link">
         <span><img src="assets/images/Manage user.png"></span>
         <span class="menu-title">Manage user</span>
@@ -48,4 +63,9 @@
       </a>
     </li>
   </ul>
+
+  <!-- <div class="bottom-nav-back">
+    <img src ="assets/images/back.png">
+    <span class="pl-3">Back</span>
+  </div> -->
 </nav>
